@@ -1,0 +1,27 @@
+doctype html
+    html
+        head
+            title Seznam objednávek
+            link(rel='stylesheet'
+href='https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css')
+        body
+            header.jumbotron-fluid.bg-danger.p-3
+                h1.text-center.text-warning #{nadpis}
+
+            main.container
+                table(class="table table-striped")
+                    thead
+                        tr.bg-danger.text-warning
+                            th Hlavní jídlo 
+                            th Příloha
+                    tbody
+                        each jidlo in jidla 
+                        tr
+                            td #{jidlo.jidlo}
+                            td #{jidlo.priloha}
+            footer.bg-dark.p-2
+                .container.text-warning
+                    p.float-right
+                        a(href="/") Zpět na formulář
+script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js')
+script(src='https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js')
